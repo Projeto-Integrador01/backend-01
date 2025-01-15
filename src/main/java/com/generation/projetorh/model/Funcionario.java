@@ -11,6 +11,7 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
 
 @Entity
@@ -25,7 +26,7 @@ public class Funcionario {
 	@Size(min = 10, max = 255, message = "O atributo nome deve conter no mínimo 10 e no máximo 255 caracteres")
 	private String nome;
 	
-	@NotBlank(message = "O atributo salario é obrigatório")
+	@NotNull(message = "O atributo salario é obrigatório")
 	private BigDecimal salario;
 	
 	@NotBlank(message = "O atributo cargo é obrigatório")

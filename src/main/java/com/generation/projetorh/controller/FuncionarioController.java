@@ -26,7 +26,7 @@ import jakarta.validation.Valid;
 @RestController
 @RequestMapping("/funcionario") 
 @CrossOrigin(origins = "", allowedHeaders = "") 
-public class FuncionariosController {
+public class FuncionarioController {
 
 	@Autowired
 	private FuncionarioRepository funcionarioRepository;
@@ -65,9 +65,9 @@ public class FuncionariosController {
 	@ResponseStatus(HttpStatus.NO_CONTENT)
 	@DeleteMapping("{id}")
 	public void delete(@PathVariable long id) {
-		Optional<Funcionario> postagem = funcionarioRepository.findById(id);
+		Optional<Funcionario> funcionario = funcionarioRepository.findById(id);
 
-		if (postagem.isEmpty())
+		if (funcionario.isEmpty())
 			throw new ResponseStatusException(HttpStatus.NOT_FOUND);
 
 		funcionarioRepository.deleteById(id);
