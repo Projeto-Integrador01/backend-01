@@ -33,7 +33,7 @@ public class Funcionario {
 	private String cargo;
 	
 	@UpdateTimestamp
-	private LocalDateTime data_adm;
+	private LocalDateTime dataAdmissao;
 
 	public Long getId() {
 		return id;
@@ -67,14 +67,12 @@ public class Funcionario {
 		this.cargo = cargo;
 	}
 
-	public LocalDateTime getData_adm() {
-		return data_adm;
+	public LocalDateTime getDataAdmissao() {
+		return dataAdmissao;
 	}
 
-	public void setData_adm(LocalDateTime data_adm) {
-		this.data_adm = data_adm;
+	public void setDataAdmissao(LocalDateTime dataAdmissao) {
+		this.dataAdmissao = dataAdmissao;
 	}
-	
-	
 	
 }
